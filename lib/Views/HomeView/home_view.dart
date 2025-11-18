@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsppuiclone/MessageScreen/message_secreen.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -80,7 +81,10 @@ class _HomeViewState extends State<HomeView> {
               itemBuilder: (context,index){
               return ListTile(
                 onTap: () {
-                  print(index);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => MessageSecreen(
+                    name : chatList[index]['name'],
+                    image : chatList[index]['image']
+                  )));
                 },
                 leading: CircleAvatar(
                   backgroundImage: NetworkImage(chatList[index]['image']),
