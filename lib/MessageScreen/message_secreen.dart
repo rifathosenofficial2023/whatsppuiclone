@@ -36,6 +36,16 @@ class _MessageSecreenState extends State<MessageSecreen> {
                         color: Colors.white,
                       ),
                 ),
+                subtitle: Text(
+                  'Last seen 03:00 AM',
+                  style: TextStyle(
+                    color: Colors.white.withValues(alpha: .5)
+                  ),
+                ),
+                trailing: const Icon(
+                  Icons.more_vert,
+                  color: Colors.white,
+                ),
 
 
               )
