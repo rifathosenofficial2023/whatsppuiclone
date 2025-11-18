@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsppuiclone/Views/HomeView/home_view.dart';
-import 'package:whatsppuiclone/Views/SplashView/splash_view.dart';
+//import 'package:whatsppuiclone/Views/SplashView/splash_view.dart';
 
 
 void main() {

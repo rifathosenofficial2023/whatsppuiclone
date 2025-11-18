@@ -26,8 +26,24 @@ class _HomeViewState extends State<HomeView> {
             IconButton(onPressed: (){}, icon:  Icon(Icons.camera_alt_rounded,color: Colors.white.withValues(alpha: .7),)),
             IconButton(onPressed: (){}, icon:  Icon(Icons.more_vert,color: Colors.white.withValues(alpha: .7),)),
           ],
-          bottom: TabBar(tabs: [
-            
+          bottom: TabBar(
+            unselectedLabelColor: Colors.white.withValues(alpha: .5),
+            labelColor: Colors.white,
+            indicatorColor: Colors.white,
+            indicatorSize: TabBarIndicatorSize.tab,
+            tabs: [
+            Tab(
+              icon: Icon(Icons.camera_alt_rounded),
+            ),
+            Tab(
+              text: 'CHATS',
+            ),
+            Tab(
+              text: 'STATUS',
+            ),
+            Tab(
+              text: 'CALLS',
+            )
           ]),
         ),
         body: Center(
