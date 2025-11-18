@@ -21,15 +21,15 @@ class _HomeViewState extends State<HomeView> {
     {
       'name': 'Md kamrul islam',
       'image': 'https://picsum.photos/200/300',
-      'last_msg': 'Hello World, how are pc',
-      'time': '3:00 AM',
+      'last_msg': 'caliye jaw tumi parba',
+      'time': '5:00 AM',
       'count': 1,
     },
     {
       'name': 'Md kamrul islam',
       'image': 'https://picsum.photos/200/300',
-      'last_msg': 'Hello World, how are pc',
-      'time': '3:00 AM',
+      'last_msg': 'kire tui parbi ',
+      'time': '2:00 AM',
       'count': 2,
     }
   ];
@@ -79,12 +79,15 @@ class _HomeViewState extends State<HomeView> {
               itemCount: chatList.length,
               itemBuilder: (context,index){
               return ListTile(
+                onTap: () {
+                  print(index);
+                },
                 leading: CircleAvatar(
-                  backgroundImage: NetworkImage('https://picsum.photos/200/300'),
+                  backgroundImage: NetworkImage(chatList[index]['image']),
                 ),
-                  title: const Text("Rifat Hosen",
+                  title: Text(chatList[index]['name'],
                   style: TextStyle(fontWeight: FontWeight.bold),),
-                  subtitle: Text("Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem!",
+                  subtitle: Text(chatList[index]['last_msg'],
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -94,13 +97,13 @@ class _HomeViewState extends State<HomeView> {
                   trailing: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text('2:01 AM',
+                      Text(chatList[index]['time'],
                       style: TextStyle(
-                        color: const Color(0xFF10cE62),
+                        color:chatList[index]['count'] == 0 ? Colors.black : const Color(0xFF10cE62),
                         fontSize: 15,
                       ),
                       ),
-                      Container(
+                      chatList[index]['count'] == 0 ? const SizedBox() : Container(
                         height: 20,
                         width: 20,
                         decoration: BoxDecoration(
@@ -108,7 +111,7 @@ class _HomeViewState extends State<HomeView> {
                           shape: BoxShape.circle,
                         ),
                         child: Center(
-                          child: Text("4",
+                          child: Text(chatList[index]['count'].toString(),
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             color: Colors.white,
