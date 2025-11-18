@@ -23,7 +23,7 @@ class _HomeViewState extends State<HomeView> {
           ),
           ),
           actions: [
-            IconButton(onPressed: (){}, icon:  Icon(Icons.camera_alt_rounded,color: Colors.white.withValues(alpha: .7),)),
+            IconButton(onPressed: (){}, icon:  Icon(Icons.search,color: Colors.white.withValues(alpha: .7),)),
             IconButton(onPressed: (){}, icon:  Icon(Icons.more_vert,color: Colors.white.withValues(alpha: .7),)),
           ],
           bottom: TabBar(
@@ -49,6 +49,12 @@ class _HomeViewState extends State<HomeView> {
         body: Center(
           child: Text("Home"),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){},
+          child: Icon(Icons.message_rounded,color: Colors.white,),
+          backgroundColor:const Color(0xFF075E55),
+          //shape: const CircleBorder(),
+          ),
       ),
     );
   }
