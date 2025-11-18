@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsppuiclone/Views/HomeView/home_view.dart';
 import 'package:whatsppuiclone/Views/SplashView/splash_view.dart';
 
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashView(),
+      home: HomeView(),
     );
   }
 }
