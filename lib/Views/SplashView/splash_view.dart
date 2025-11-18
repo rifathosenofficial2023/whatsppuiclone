@@ -12,7 +12,10 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('data'),
+        child: Image.asset('assets/images/logo.png',
+        width: 100,
+        height: 100,
+        ),
       ),
     );
   }
